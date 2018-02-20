@@ -1,11 +1,11 @@
 package com.fms.model.facility;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Facility implements IFacility {
 	
 	private IFacilityDetail facilitydetail;
-	private ArrayList<IBuilding> buildings;
+	private List<IBuilding> buildings;
 	private String facilityid;
 	
 

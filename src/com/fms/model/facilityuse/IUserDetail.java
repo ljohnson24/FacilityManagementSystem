@@ -7,4 +7,6 @@ public interface IUserDetail {
 	public void setUserAddress(String useraddress);
 	public String getUserEmail();
 	public void setUserEmail(String useremail);
+	public int getUserPhone();
+	public void setUserPhone(int userphone);
 }
