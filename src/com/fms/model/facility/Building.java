@@ -7,7 +7,7 @@ public class Building implements IBuilding {
 	private String buildingname;
 	private String buildingaddress;
 	private int buildingphone; 
-	private ArrayList<ILevel> levels;
+	private ArrayList<IRoom> rooms;
 	
 	
 	public String getBuildingName() {
@@ -45,14 +45,14 @@ public class Building implements IBuilding {
 		this.buildingphone = buildingphone;
 	}
 	
-	public void addLevel(ILevel level) {
+	public void addRoom(IRoom room) {
 		
-		this.levels.add(level);
+		this.rooms.add(room);
 	}
 	
-	public void removeLevel(ILevel level) {
+	public void removeRoom(IRoom room) {
 		
-		this.levels.remove(level);
+		this.rooms.remove(room);
 	}
 
 }

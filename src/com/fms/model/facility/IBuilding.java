@@ -8,7 +8,7 @@ public interface IBuilding {
 	public void setBuildingAddress(String buildingaddress);
 	public int getBuildingPhone();
 	public void setBuildingPhone(int buildingphone);
-	public void addLevel(ILevel level);
-	public void removeLevel(ILevel level);
+	public void addRoom(IRoom room);
+	public void removeRoom(IRoom room);
 
 }
