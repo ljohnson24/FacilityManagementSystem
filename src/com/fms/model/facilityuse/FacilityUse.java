@@ -33,4 +33,22 @@ public class FacilityUse implements IFacilityUse {
 		return facility;
 	}
 
+	@Override
+	public void addInspection(IInspection inspection) {
+		
+		this.inspections.add(inspection);
+	}
+
+	@Override
+	public void removeInspection(IInspection inspection) {
+		
+		this.inspections.remove(inspection);
+	}
+
+	@Override
+	public List<IInspection> listInspection() {
+		// 
+		return inspections;
+	}
+
 }
