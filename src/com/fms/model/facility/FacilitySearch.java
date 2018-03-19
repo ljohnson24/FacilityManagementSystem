@@ -1,6 +1,17 @@
 package com.fms.model.facility;
 
+public class FacilitySearch implements IFacilitySearch {
 
-public interface FacilitySearch {
-	public IFacility searchByID(IFacility facility);
+	@Override
+	public IBuilding searchByID(String buildingid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IBuilding searchByName(String buildingname) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
