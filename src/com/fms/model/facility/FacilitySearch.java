@@ -1,16 +1,20 @@
 package com.fms.model.facility;
 
+import java.util.List;
+
 public class FacilitySearch implements IFacilitySearch {
+	
+	private List<IBuilding> buildings;
 
 	@Override
-	public IBuilding searchByID(String buildingid) {
-		// TODO Auto-generated method stub
+	public IBuilding searchByID(List<IBuilding> buildings, String buildingid) {
+		
 		return null;
 	}
 
 	@Override
-	public IBuilding searchByName(String buildingname) {
-		// TODO Auto-generated method stub
+	public IBuilding searchByName(List<IBuilding> buildings, String buildingname) {
+		
 		return null;
 	}
 
