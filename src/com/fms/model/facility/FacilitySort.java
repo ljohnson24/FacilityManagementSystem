@@ -1,5 +1,12 @@
 package com.fms.model.facility;
 
-public interface FacilitySort {
+import java.util.List;
+public class FacilitySort implements IFacilitySort {
+	
+	private List<IBuilding> buildings;
+	
+	public List<IBuilding> sortByName(List<IBuilding> buildings){
+		return this.buildings;
+	}
 
 }
