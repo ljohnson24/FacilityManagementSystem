@@ -7,7 +7,7 @@ public class Building implements IBuilding {
 	private String buildingname;
 	private String buildingaddress;
 	private int buildingphone; 
-	private ArrayList<IRoom> rooms;
+	private List <IRoom> rooms;
 	
 	
 	public String getBuildingName() {
