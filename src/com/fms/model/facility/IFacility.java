@@ -1,10 +1,15 @@
 package com.fms.model.facility;
 
 public interface IFacility {
-	public String getFacilityID();
-	public void setFacilityID(String facilityid);
-	public IFacilityDetail getFacilityDetail();
-	public void setFacilityDetail(IFacilityDetail facilitydetail);
-	public void addBuilding(IBuilding building);
-	public void removeBuilding(IBuilding building);
+	String getFacilityID();
+	void setFacilityID(String facilityid);
+	IFacilityDetail getFacilityDetail();
+	void setFacilityDetail(IFacilityDetail facilitydetail);
+	void addBuilding(IBuilding building);
+	void removeBuilding(IBuilding building);
+	void setFacilityMaintenance(IFacilityMaintenance facilitymaintenance);
+	IFacilityMaintenance getFacilityMaintenance();
+	void setInspection(IInspection inspection);
+	IInspection getInspection();
+	
 }
