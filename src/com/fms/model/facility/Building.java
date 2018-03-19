@@ -1,48 +1,27 @@
 package com.fms.model.facility;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Building implements IBuilding {
-	
-	private String buildingname;
-	private String buildingaddress;
-	private int buildingphone; 
+	private String buildingid;
+	private IBuildingDetail buildingdetail;
 	private List <IRoom> rooms;
 	
 	
-	public String getBuildingName() {
-		
-		return buildingname;
+	public String getBuildingID() {
+		return this.buildingid;
 	}
-
 	
-	public void setBuildingName(String buildingname) {
-		
-		this.buildingname = buildingname;
+	public void setBuildingID(String buildingid) {
+		this.buildingid = buildingid;
 	}
-
 	
-	public String getBuildingAddress() {
-		
-		return buildingaddress;
+	public IBuildingDetail getBuildingDetail() {
+		return this.buildingdetail;
 	}
-
 	
-	public void setBuildingAddress(String buildingaddress) {
-		
-		this.buildingaddress = buildingaddress;
-	}
-
-	
-	public int getBuildingPhone() {
-		
-		return buildingphone;
-	}
-
-	
-	public void setBuildingPhone(int buildingphone) {
-		
-		this.buildingphone = buildingphone;
+	public void setBuildingDetail(IBuildingDetail buildingdetail) {
+		this.buildingdetail = buildingdetail;
 	}
 	
 	public void addRoom(IRoom room) {
