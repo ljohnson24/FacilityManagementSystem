@@ -1,4 +1,4 @@
-package com.fms.model.facilityuse;
+package com.fms.model.facilityinspection;
 
 public interface IInspection {
 	String getInspectionID();
