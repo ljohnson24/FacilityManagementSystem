@@ -1,7 +1,9 @@
 package com.fms.model.facilityuse;
 
 import java.util.List;
+import com.fms.model.facilityinspection.*;
 import com.fms.model.facility.IFacility;
+import com.fms.model.facility.IRoom;
 
 public class FacilityUse implements IFacilityUse {
 	
@@ -39,16 +41,44 @@ public class FacilityUse implements IFacilityUse {
 		this.inspections.add(inspection);
 	}
 
-	@Override
 	public void removeInspection(IInspection inspection) {
 		
 		this.inspections.remove(inspection);
 	}
 
-	@Override
 	public List<IInspection> listInspection() {
-		// 
+		 
 		return inspections;
+	}
+
+	@Override
+	public void assignFacilityToUse(IRoom room, IUser user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void vacateFacility(IRoom room) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isInUseDuringInterval(IRoom room, int interval) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public double calcUsageRate(IRoom room) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double listActualUsage(IRoom room) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

@@ -1,5 +1,8 @@
 package com.fms.model.facility;
 
+import com.fms.model.facilitymaintenance.*;
+import com.fms.model.facilityinspection.*;
+
 public interface IFacility {
 	String getFacilityID();
 	void setFacilityID(String facilityid);

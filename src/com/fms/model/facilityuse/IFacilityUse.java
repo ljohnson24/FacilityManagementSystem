@@ -1,6 +1,7 @@
 package com.fms.model.facilityuse;
 
 import java.util.List;
+import com.fms.model.facilityinspection.*;
 import com.fms.model.facility.*;
 
 public interface IFacilityUse {
