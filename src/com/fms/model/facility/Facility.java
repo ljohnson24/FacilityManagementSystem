@@ -13,6 +13,9 @@ public class Facility implements IFacility {
 	private IInspection inspection;
 	
 
+	public Facility(IfacilityDetail facilitydetail, List<IBuilding> buildings, String facilityid, IFacilityMaintenance facilitymaintenance, IInspection inspection) {
+		
+	}
 	public void setFacilityDetail (IFacilityDetail facilitydetail) {
 		
 		this.facilitydetail = facilitydetail;
