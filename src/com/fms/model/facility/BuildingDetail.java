@@ -5,7 +5,12 @@ public class BuildingDetail implements IBuildingDetail {
 	private String buildingaddress;
 	private int buildingphone;
 
-	
+
+	public BuildingDetail(String buildingname, String buildingaddress, int buildingphone) {
+		this.buildingname = buildingname;
+		this.buildingaddress = buildingaddress;
+		this.buildingphone = buildingphone;
+	}
 	public String getBuildingName() {
 		
 		return this.buildingname;
