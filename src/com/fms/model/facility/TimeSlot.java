@@ -48,7 +48,7 @@ public class TimeSlot implements ITimeSlot {
 
 	
 	public boolean getSlotStatus(int slot) {
-		this.slots.get(slot)
+		this.slots.get(slot);
 		return false;
 	}
 	
