@@ -1,8 +1,13 @@
 package com.fms.model.facility;
+import java.util.List;
+
 import com.fms.model.facilityuse.*;
 
 public interface ITimeSlot {
-	void setOccupant(IUser user);
-	void removeOccupant(IUser user);
-	IUser getOccupant();
+	List<IUser> getOccupiedSlots();
+	int getOccupiedSlotsCount();
+	int getOpenSlotsCount();
+	void occupySlot(IUser user);
+	void vacateSlot(int slot);
+	boolean getSlotStatus(int slot);
 }
