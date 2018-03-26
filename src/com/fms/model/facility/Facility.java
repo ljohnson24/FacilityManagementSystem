@@ -1,5 +1,6 @@
 package com.fms.model.facility;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.fms.model.facilityinspection.*;
 import com.fms.model.facilitymaintenance.*;
@@ -13,8 +14,12 @@ public class Facility implements IFacility {
 	private IInspection inspection;
 	
 
-	public Facility(IfacilityDetail facilitydetail, List<IBuilding> buildings, String facilityid, IFacilityMaintenance facilitymaintenance, IInspection inspection) {
-		
+	public Facility(IFacilityDetail facilitydetail, List<IBuilding> buildings, String facilityid, IFacilityMaintenance facilitymaintenance, IInspection inspection) {
+		this.facilitydetail = facilitydetail;
+		this.buildings = new ArrayList<>();
+		this.facilityid = facilityid;
+		this.facilitymaintenance = facilitymaintenance;
+		this.inspection = inspection;
 	}
 	public void setFacilityDetail (IFacilityDetail facilitydetail) {
 		
