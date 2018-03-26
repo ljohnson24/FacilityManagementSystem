@@ -3,11 +3,17 @@ package com.fms.model.facility;
 public class Room implements IRoom {
 	private String roomid;
 	private int roomcapacity;
-	private int roomcost;
+	private double roomcost;
 	private String roomtype;
 	private int roomphone;
 
-	
+	public Room (String roomid, int roomcapacity, double roomcost, String roomtype, int roomphone) {
+		this.roomid = roomid;
+		this.roomcapacity = roomcapacity;
+		this.roomcost = roomcost;
+		this.roomtype = roomtype;
+		this.roomphone = roomphone;
+	}
 	public String getRoomID() {
 		
 		return roomid;
@@ -37,7 +43,7 @@ public class Room implements IRoom {
 	}
 
 	
-	public void setRoomCost(int roomcost) {
+	public void setRoomCost(double roomcost) {
 		
 		this.roomcost = roomcost;
 	}

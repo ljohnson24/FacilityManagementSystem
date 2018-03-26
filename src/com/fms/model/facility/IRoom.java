@@ -6,7 +6,7 @@ public interface IRoom {
 	public int getRoomCapacity();
 	public void setRoomCapacity(int roomcapacity);
 	public double getRoomCost();
-	public void setRoomCost(int roomcost);
+	public void setRoomCost(double roomcost);
 	public String getRoomType();
 	public void setRoomType(String roomtype);
 	public int getRoomPhone();
