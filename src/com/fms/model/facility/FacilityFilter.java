@@ -1,9 +1,7 @@
 package com.fms.model.facility;
 
-import com.fms.model.facility.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class FacilityFilter implements IFacilityFilter {
 	private List<IBuilding> buildings;
