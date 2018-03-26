@@ -38,5 +38,9 @@ public class Building implements IBuilding {
 		
 		this.rooms.remove(room);
 	}
+	
+	public List<IRoom> getRooms(){
+		return this.rooms;
+	}
 
 }
