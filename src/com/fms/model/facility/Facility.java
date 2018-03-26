@@ -1,15 +1,16 @@
 package com.fms.model.facility;
 
 import java.util.List;
-
-import com.fms.model.facilityinspection.IInspection;
-import com.fms.model.facilitymaintenance.IFacilityMaintenance;
+import com.fms.model.facilityinspection.*;
+import com.fms.model.facilitymaintenance.*;
 
 public class Facility implements IFacility {
 	
 	private IFacilityDetail facilitydetail;
 	private List<IBuilding> buildings;
 	private String facilityid;
+	private IFacilityMaintenance facilitymaintenance;
+	private IInspection inspection;
 	
 
 	public void setFacilityDetail (IFacilityDetail facilitydetail) {
@@ -43,28 +44,28 @@ public class Facility implements IFacility {
 		this.buildings.remove(building);
 	}
 
-	@Override
+	
 	public void setFacilityMaintenance(IFacilityMaintenance facilitymaintenance) {
-		// TODO Auto-generated method stub
+		this.facilitymaintenance = facilitymaintenance;
 		
 	}
 
-	@Override
+	
 	public IFacilityMaintenance getFacilityMaintenance() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setInspection(IInspection inspection) {
-		// TODO Auto-generated method stub
 		
+		return this.facilitymaintenance;
 	}
 
-	@Override
+	
+	public void setInspection(IInspection inspection) {
+		
+		this.inspection = inspection;
+	}
+
+	
 	public IInspection getInspection() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return this.inspection;
 	}
 
 
