@@ -11,5 +11,10 @@ public interface IRoom {
 	public void setRoomType(String roomtype);
 	public int getRoomPhone();
 	public void setRoomPhone(int roomphone);
+	public void occupyRoom();
+	public void vacateRoom();
+	public boolean getRoomStatus();
+	
+	}
 
 }
