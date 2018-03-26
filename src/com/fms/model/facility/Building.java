@@ -1,5 +1,6 @@
 package com.fms.model.facility;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Building implements IBuilding {
@@ -7,7 +8,11 @@ public class Building implements IBuilding {
 	private IBuildingDetail buildingdetail;
 	private List <IRoom> rooms;
 	
-	
+	public Building(String buildingid, IBuildingDetail buildingdetail, List<IRoom> rooms) {
+		this.buildingid = buildingid;
+		this.buildingdetail = buildingdetail;
+		this.rooms = new ArrayList<IRoom>();
+	}
 	public String getBuildingID() {
 		return this.buildingid;
 	}
