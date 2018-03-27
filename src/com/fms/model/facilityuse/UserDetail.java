@@ -6,7 +6,13 @@ public class UserDetail implements IUserDetail {
 	private String useremail;
 	private int userphone;
 
-	@Override
+	
+	public UserDetail(String username, String useraddress, String useremail, int userphone) {
+		this.username = username;
+		this.useraddress = useraddress;
+		this.useremail = useremail;
+		this.userphone = userphone;
+	}
 	public String getUserName() {
 		
 		return username;

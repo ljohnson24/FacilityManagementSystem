@@ -12,30 +12,30 @@ public class FacilityUse implements IFacilityUse {
 	private IFacilitySchedule facilityschedule;
 	private List<IInspection> inspections;
 
-	@Override
+	
 	public void addUser(IUser user) {
 		
 		this.users.add(user);
 	}
 
-	@Override
+	
 	public void removeUser(IUser user) {
 		
 		this.users.remove(user);
 	}
 
-	@Override
+	
 	public void setFacility(IFacility facility) {
 		this.facility = facility;
 	}
 
-	@Override
+	
 	public IFacility getFacility() {
 		
 		return facility;
 	}
 
-	@Override
+	
 	public void addInspection(IInspection inspection) {
 		
 		this.inspections.add(inspection);
@@ -51,13 +51,13 @@ public class FacilityUse implements IFacilityUse {
 		return inspections;
 	}
 
-	@Override
+	
 	public void assignFacilityToUse(IRoom room, IUser user) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public void vacateFacility(IRoom room) {
 		// TODO Auto-generated method stub
 		

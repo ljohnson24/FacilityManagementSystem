@@ -5,13 +5,17 @@ public class User implements IUser {
 	private String userid;
 	private IUserDetail userdetail;
 	
-	@Override
+	
+	public User(String userid, IUserDetail userdetail) {
+		this.userid = userid;
+		this.userdetail = userdetail;
+	}
 	public String getUserID() {
 		
 		return userid;
 	}
 
-	@Override
+	
 	public void setUserID(String userid) {
 		
 		this.userid = userid;
