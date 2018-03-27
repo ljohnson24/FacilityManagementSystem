@@ -6,8 +6,11 @@ public class InspectionDetail implements IInspectionDetail {
 	private String inspectiondate;
 	private String inspectionnote;
 
-	public InspectionDetail() {
+	public InspectionDetail(String inspectiondate, boolean inspectionresult, String inspectionnote){
 		
+		this.inspectiondate = inspectiondate;
+		this.inspectionresult = inspectionresult;
+		this.inspectionnote = inspectionnote;
 	}
 	public boolean getInspectionResult() {
 		

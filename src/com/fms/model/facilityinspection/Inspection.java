@@ -6,7 +6,11 @@ public class Inspection implements IInspection {
 	private IInspectionDetail inspectiondetail;
 	private IInspector inspector;
 	
-	
+	public Inspection(String inspectionid, IInspectionDetail inspectiondetail, IInspector inspector) {
+		this.inspectionid = inspectionid;
+		this.inspectiondetail = inspectiondetail;
+		this.inspector = inspector;
+	}
 	public String getInspectionID() {
 		
 		return inspectionid;

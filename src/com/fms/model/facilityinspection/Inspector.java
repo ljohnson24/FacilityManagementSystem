@@ -4,7 +4,10 @@ public class Inspector implements IInspector {
 	private String inspectorname;
 	private String inspectorid;
 	
-	
+	public Inspector(String inspectorname, String inspectorid) {
+		this.inspectorname = inspectorname;
+		this.inspectorid = inspectorid;
+	}
 	public String getInspectorName() {
 		
 		return inspectorname;
