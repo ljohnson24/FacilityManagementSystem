@@ -10,6 +10,9 @@ public class TimeSlot implements ITimeSlot {
 	private List<IUser> slots;
 	private int slotlimit;
 	
+	public String toString() {
+		return "TimeSlot(NumOfSlots:"+slots.size()+")";
+	}
 	public TimeSlot(int slotlimit) {
 		this.slots = new ArrayList<>();
 		this.slotlimit = slotlimit;

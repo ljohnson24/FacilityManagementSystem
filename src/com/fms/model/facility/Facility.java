@@ -14,6 +14,9 @@ public class Facility implements IFacility {
 	private IInspection inspection;
 	
 
+	public String toString() {
+		return "Facility(ID:"+facilityid+", "+facilitydetail+", NumOfBldg"+buildings.size()+")";
+	}
 	public Facility(IFacilityDetail facilitydetail, List<IBuilding> buildings, String facilityid, IFacilityMaintenance facilitymaintenance, IInspection inspection) {
 		this.facilitydetail = facilitydetail;
 		this.buildings = new ArrayList<>();

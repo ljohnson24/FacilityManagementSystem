@@ -8,6 +8,10 @@ public class Room implements IRoom {
 	private int roomphone;
 	private boolean roomstatus;
 
+	public String toString() {
+		return "Room(ID:"+roomid+", Capacity:"+roomcapacity+", Phone:"+roomphone+", Status:"
+				+roomstatus+")";
+	}
 	public Room (String roomid, int roomcapacity, double roomcost, String roomtype, int roomphone) {
 		this.roomid = roomid;
 		this.roomcapacity = roomcapacity;

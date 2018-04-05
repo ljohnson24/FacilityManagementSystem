@@ -8,6 +8,9 @@ public class Building implements IBuilding {
 	private IBuildingDetail buildingdetail;
 	private List <IRoom> rooms;
 	
+	public String toString() {
+		return "Building("+buildingid+buildingdetail+"NumOfRooms("+rooms.size()+"))";
+	}
 	public Building(String buildingid, IBuildingDetail buildingdetail, List<IRoom> rooms) {
 		this.buildingid = buildingid;
 		this.buildingdetail = buildingdetail;
