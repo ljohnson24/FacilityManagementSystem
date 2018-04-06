@@ -3,6 +3,12 @@ package com.fms.model.facilityuse;
 import com.fms.model.facility.IRoom;
 
 public class FacilitySchedule implements IFacilitySchedule {
+	
+	@Override
+	public String toString() {
+		return "FacilitySchedule [room=" + room + ", user=" + user + ", interval=" + interval + "]";
+	}
+
 	private IRoom room;
 	private IUser user;
 	private int interval;

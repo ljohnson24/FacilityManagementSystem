@@ -1,6 +1,12 @@
 package com.fms.model.facilityuse;
 
 public class UserDetail implements IUserDetail {
+	@Override
+	public String toString() {
+		return "UserDetail [username=" + username + ", useraddress=" + useraddress + ", useremail=" + useremail
+				+ ", userphone=" + userphone + "]";
+	}
+
 	private String username;
 	private String useraddress;
 	private String useremail;
