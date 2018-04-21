@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Building implements IBuilding {
+	
 	private String buildingid;
 	private IBuildingDetail buildingdetail;
 	private List <IRoom> rooms;

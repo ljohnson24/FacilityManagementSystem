@@ -8,18 +8,16 @@ public class Room implements IRoom {
 	private int roomphone;
 	private boolean roomstatus;
 
-	@Override
-	public String toString() {
-		return "Room(ID:"+roomid+", Capacity:"+roomcapacity+", Phone:"+roomphone+", Status:"
-				+roomstatus+")";
-	}
+	
 	public Room (String roomid, int roomcapacity, double roomcost, String roomtype, int roomphone) {
 		this.roomid = roomid;
 		this.roomcapacity = roomcapacity;
 		this.roomcost = roomcost;
 		this.roomtype = roomtype;
 		this.roomphone = roomphone;
+		this.roomstatus = false;
 	}
+	
 	public String getRoomID() {
 		
 		return roomid;
@@ -88,6 +86,12 @@ public class Room implements IRoom {
 	
 	public boolean getRoomStatus() {
 		return this.roomstatus;
+	}
+	
+	@Override
+	public String toString() {
+		return "Room(ID:"+roomid+", Capacity:"+roomcapacity+", Phone:"+roomphone+", Status:"
+				+roomstatus+")";
 	}
 
 }
