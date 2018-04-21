@@ -8,6 +8,7 @@ public class Building implements IBuilding {
 	private IBuildingDetail buildingdetail;
 	private List <IRoom> rooms;
 	
+	@Override
 	public String toString() {
 		return "Building("+buildingid+buildingdetail+"NumOfRooms("+rooms.size()+"))";
 	}

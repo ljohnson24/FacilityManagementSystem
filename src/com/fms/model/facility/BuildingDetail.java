@@ -5,6 +5,7 @@ public class BuildingDetail implements IBuildingDetail {
 	private String buildingaddress;
 	private int buildingphone;
 
+	@Override
 	public String toString() {
 		return "BuildingDetail("+"Name:"+buildingname+", Address:"+buildingaddress+", Phone:"
 				+buildingphone+")";

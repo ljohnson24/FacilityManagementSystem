@@ -2,12 +2,6 @@ package com.fms.model.facilityinspection;
 
 public class InspectionDetail implements IInspectionDetail {
 	
-	@Override
-	public String toString() {
-		return "InspectionDetail [inspectionresult=" + inspectionresult + ", inspectiondate=" + inspectiondate
-				+ ", inspectionnote=" + inspectionnote + "]";
-	}
-
 	private boolean inspectionresult;
 	private String inspectiondate;
 	private String inspectionnote;
@@ -45,6 +39,12 @@ public class InspectionDetail implements IInspectionDetail {
 	
 	public String getInspectionNote() {
 		return inspectionnote;
+	}
+	
+	@Override
+	public String toString() {
+		return "InspectionDetail [inspectionresult=" + inspectionresult + ", inspectiondate=" + inspectiondate
+				+ ", inspectionnote=" + inspectionnote + "]";
 	}
 
 }

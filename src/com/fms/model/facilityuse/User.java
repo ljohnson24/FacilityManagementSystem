@@ -2,11 +2,6 @@ package com.fms.model.facilityuse;
 
 public class User implements IUser {
 
-	@Override
-	public String toString() {
-		return "User [userid=" + userid + ", userdetail=" + userdetail + "]";
-	}
-
 	private String userid;
 	private IUserDetail userdetail;
 	
@@ -32,6 +27,12 @@ public class User implements IUser {
 	
 	public void setUserDetail(IUserDetail userdetail) {
 		this.userdetail = userdetail;
+	}
+	
+
+	@Override
+	public String toString() {
+		return "User [userid=" + userid + ", userdetail=" + userdetail + "]";
 	}
 
 }

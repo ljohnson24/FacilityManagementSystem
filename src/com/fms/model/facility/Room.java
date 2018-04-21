@@ -8,6 +8,7 @@ public class Room implements IRoom {
 	private int roomphone;
 	private boolean roomstatus;
 
+	@Override
 	public String toString() {
 		return "Room(ID:"+roomid+", Capacity:"+roomcapacity+", Phone:"+roomphone+", Status:"
 				+roomstatus+")";

@@ -1,11 +1,6 @@
 package com.fms.model.facilityinspection;
 
 public class Inspector implements IInspector {
-	@Override
-	public String toString() {
-		return "Inspector [inspectorname=" + inspectorname + ", inspectorid=" + inspectorid + "]";
-	}
-
 
 	private String inspectorname;
 	private String inspectorid;
@@ -35,6 +30,11 @@ public class Inspector implements IInspector {
 	public void setInspectorID(String inspectorid) {
 		
 		this.inspectorid = inspectorid;
+	}
+	
+	@Override
+	public String toString() {
+		return "Inspector [inspectorname=" + inspectorname + ", inspectorid=" + inspectorid + "]";
 	}
 
 }

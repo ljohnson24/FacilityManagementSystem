@@ -4,11 +4,6 @@ import com.fms.model.facility.IRoom;
 
 public class FacilitySchedule implements IFacilitySchedule {
 	
-	@Override
-	public String toString() {
-		return "FacilitySchedule [room=" + room + ", user=" + user + ", interval=" + interval + "]";
-	}
-
 	private IRoom room;
 	private IUser user;
 	private int interval;
@@ -41,6 +36,12 @@ public class FacilitySchedule implements IFacilitySchedule {
 	public double listActualUsage(IRoom room) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "FacilitySchedule [room=" + room + ", user=" + user + ", interval=" + interval + "]";
 	}
 
 }

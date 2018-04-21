@@ -10,6 +10,7 @@ public class TimeSlot implements ITimeSlot {
 	private List<IUser> slots;
 	private int slotlimit;
 	
+	@Override
 	public String toString() {
 		return "TimeSlot(NumOfSlots:"+slots.size()+")";
 	}

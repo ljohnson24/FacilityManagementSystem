@@ -7,12 +7,6 @@ import com.fms.model.facility.IRoom;
 
 public class FacilityUse implements IFacilityUse {
 	
-	@Override
-	public String toString() {
-		return "FacilityUse [users=" + users + ", facility=" + facility + ", facilityschedule=" + facilityschedule
-				+ ", inspections=" + inspections + "]";
-	}
-
 	private List<IUser> users;
 	private IFacility facility;
 	private IFacilitySchedule facilityschedule;
@@ -85,6 +79,12 @@ public class FacilityUse implements IFacilityUse {
 	public double listActualUsage(IRoom room) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	@Override
+	public String toString() {
+		return "FacilityUse [users=" + users + ", facility=" + facility + ", facilityschedule=" + facilityschedule
+				+ ", inspections=" + inspections + "]";
 	}
 
 }
