@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.fms.model.facilityinspection.*;
 import com.fms.model.facilitymaintenance.*;
+import com.fms.model.facilityuse.*;
 
 public class Facility implements IFacility {
 	
@@ -12,6 +13,7 @@ public class Facility implements IFacility {
 	private String facilityid;
 	private IFacilityMaintenance facilitymaintenance;
 	private IInspection inspection;
+	private IFacilitySchedule facilityschedule;
 	
 	@Override
 	public String toString() {
@@ -78,6 +80,5 @@ public class Facility implements IFacility {
 		
 		return this.inspection;
 	}
-
 
 }

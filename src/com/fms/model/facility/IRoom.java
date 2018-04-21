@@ -14,7 +14,5 @@ public interface IRoom {
 	public void occupyRoom();
 	public void vacateRoom();
 	public boolean getRoomStatus();
-	
-	}
 
 }

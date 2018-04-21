@@ -16,25 +16,25 @@ public class FacilitySchedule implements IFacilitySchedule {
 
 	@Override
 	public void vacateFacility(IRoom room) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
 	@Override
 	public boolean isInUseDuringInterval(IRoom room, int interval) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
 	@Override
 	public double calcUsageRate(IRoom room) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
 	@Override
 	public double listActualUsage(IRoom room) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 	

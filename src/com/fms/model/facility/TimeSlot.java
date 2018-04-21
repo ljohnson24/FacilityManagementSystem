@@ -41,7 +41,7 @@ public class TimeSlot implements ITimeSlot {
 	public void occupySlot(IUser user) {
 		if (slots.size()<=8) {
 		this.slots.add(user);
-		
+		}
 	}
 
 	
