@@ -1,5 +1,7 @@
 package com.fms.model.facility;
 
+import java.util.List;
+
 public interface IBuilding {
 	
 
@@ -9,5 +11,7 @@ public interface IBuilding {
 	void setBuildingDetail(IBuildingDetail buildingdetail);
 	void addRoom(IRoom room);
 	void removeRoom(IRoom room);
+	
+	List<IRoom> getRooms();
 
 }

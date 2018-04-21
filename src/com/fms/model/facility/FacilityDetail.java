@@ -7,6 +7,15 @@ public class FacilityDetail implements IFacilityDetail {
 	String facilityaddress;
 	int facilityphone;
 	
+	public String toString() {
+		return "FacilityDetail(Name:"+facilityname+", Address:"+facilityaddress+", Phone:"+facilityphone+")";
+	}
+	public FacilityDetail(String facilityname, String facilitydescription, String facilityaddress, int facilityphone) {
+		this.facilityname = facilityname;
+		this.facilitydescription = facilitydescription;
+		this.facilityaddress = facilityaddress;
+		this.facilityphone = facilityphone;
+	}
 	public String getFacilityName() {
 		
 		return facilityname;
