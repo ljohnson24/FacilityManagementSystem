@@ -1,7 +1,7 @@
 package com.fms.model.facilityinspection;
 
 public class InspectionDetail implements IInspectionDetail {
-	
+
 	private boolean inspectionresult;
 	private String inspectiondate;
 	private String inspectionnote;
@@ -12,6 +12,7 @@ public class InspectionDetail implements IInspectionDetail {
 		this.inspectionresult = inspectionresult;
 		this.inspectionnote = inspectionnote;
 	}
+	
 	public boolean getInspectionResult() {
 		
 		return this.inspectionresult;
