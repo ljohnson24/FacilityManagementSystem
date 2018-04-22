@@ -50,7 +50,7 @@ public class FacilityUse implements IFacilityUse {
 		for (IBuilding building:facility.getBuildings()) {
 			for (IRoom room:building.getRooms()) {
 				if (room.getRoomID() == roomid) {
-					if (room.getRoomStatus() == false){
+					if (room.getRoomStatus() == true){
 						System.out.println("Room is already in use, please choose a different room");
 						break;
 					}
@@ -72,10 +72,11 @@ public class FacilityUse implements IFacilityUse {
 			for (IRoom room:building.getRooms()) {
 				if (room.getRoomID() == roomid) {
 					if (room.getRoomStatus() == false){
-						System.out.println("Room is already in use, please choose a different room");
+						System.out.println("Room is already vacant");
 						break;
 					}
-					
+					room.getTimeSlot().vacateSlot(0);
+					room.vacateRoom();
 					
 				}
 			}
@@ -85,19 +86,44 @@ public class FacilityUse implements IFacilityUse {
 
 	
 	public boolean isInUseDuringInterval(String roomid, int interval) {
-		// TODO Auto-generated method stub
+		for (IBuilding building:facility.getBuildings()) {
+			for (IRoom room:building.getRooms()) {
+				if (room.getRoomID() == roomid) {
+					if (room.getRoomStatus() == false){
+						System.out.println("Room is already vacant");
+						return true;
+					}
+				}
+			}
+		}
 		return false;
 	}
 
 	
 	public double calcUsageRate(String roomid) {
-		// TODO Auto-generated method stub
+		for (IBuilding building:facility.getBuildings()) {
+			for (IRoom room:building.getRooms()) {
+				if (room.getRoomID() == roomid) {
+					
+						return room.getTimeSlot().getOccupiedSlotsCount();
+				}
+			}
+		}
 		return 0;
 	}
 
 	
 	public double listActualUsage(String roomid) {
-		// TODO Auto-generated method stub
+		for (IBuilding building:facility.getBuildings()) {
+			for (IRoom room:building.getRooms()) {
+				if (room.getRoomID() == roomid) {
+					if (room.getRoomStatus() == true){
+						System.out.println("Room is occupied by " + room.getTimeSlot().getOccupiedSlots());
+						return 1;
+					}
+				}
+			}
+		}
 		return 0;
 	}
 	
