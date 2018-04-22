@@ -15,10 +15,7 @@ public class Facility implements IFacility {
 	private IInspection inspection;
 	private IFacilitySchedule facilityschedule;
 	
-	@Override
-	public String toString() {
-		return "Facility(ID:"+facilityid+", "+facilitydetail+", NumOfBldg"+buildings.size()+")";
-	}
+	
 	public Facility(IFacilityDetail facilitydetail, List<IBuilding> buildings, String facilityid, IFacilityMaintenance facilitymaintenance, IInspection inspection) {
 		this.facilitydetail = facilitydetail;
 		this.buildings = new ArrayList<>();
@@ -84,4 +81,8 @@ public class Facility implements IFacility {
 		return this.inspection;
 	}
 
+	@Override
+	public String toString() {
+		return "Facility(ID:"+facilityid+", "+facilitydetail+", NumOfBldg"+buildings.size()+")";
+	}
 }

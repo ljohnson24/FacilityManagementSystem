@@ -7,10 +7,7 @@ public class FacilityDetail implements IFacilityDetail {
 	String facilityaddress;
 	int facilityphone;
 	
-	@Override
-	public String toString() {
-		return "FacilityDetail(Name:"+facilityname+", Address:"+facilityaddress+", Phone:"+facilityphone+")";
-	}
+	
 	public FacilityDetail(String facilityname, String facilitydescription, String facilityaddress, int facilityphone) {
 		this.facilityname = facilityname;
 		this.facilitydescription = facilitydescription;
@@ -64,4 +61,8 @@ public class FacilityDetail implements IFacilityDetail {
 		this.facilityaddress = facilityaddress;
 	}
 
+	@Override
+	public String toString() {
+		return "FacilityDetail(Name:"+facilityname+", Address:"+facilityaddress+", Phone:"+facilityphone+")";
+	}
 }
