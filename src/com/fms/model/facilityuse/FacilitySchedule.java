@@ -17,7 +17,6 @@ public class FacilitySchedule implements IFacilitySchedule {
 	@Override
 	public void vacateFacility(IRoom room) {
 		
-
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package com.fms.model.facility;
 import java.util.List;
-
 import com.fms.model.facilityuse.*;
 
 public interface ITimeSlot {

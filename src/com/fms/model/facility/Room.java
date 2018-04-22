@@ -7,7 +7,20 @@ public class Room implements IRoom {
 	private String roomtype;
 	private int roomphone;
 	private boolean roomstatus;
+	private ITimeSlot timeslot;
 
+	
+	public ITimeSlot getTimeslot() {
+		return timeslot;
+	}
+
+	public void setTimeslot(ITimeSlot timeslot) {
+		this.timeslot = timeslot;
+	}
+
+	public Room() {
+		
+	}
 	
 	public Room (String roomid, int roomcapacity, double roomcost, String roomtype, int roomphone) {
 		this.roomid = roomid;
@@ -16,6 +29,7 @@ public class Room implements IRoom {
 		this.roomtype = roomtype;
 		this.roomphone = roomphone;
 		this.roomstatus = false;
+		
 	}
 	
 	public String getRoomID() {
