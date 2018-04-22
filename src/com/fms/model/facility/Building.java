@@ -9,10 +9,7 @@ public class Building implements IBuilding {
 	private IBuildingDetail buildingdetail;
 	private List <IRoom> rooms;
 	
-	@Override
-	public String toString() {
-		return "Building("+buildingid+buildingdetail+"NumOfRooms("+rooms.size()+"))";
-	}
+	
 	public Building(String buildingid, IBuildingDetail buildingdetail, List<IRoom> rooms) {
 		this.buildingid = buildingid;
 		this.buildingdetail = buildingdetail;
@@ -47,6 +44,11 @@ public class Building implements IBuilding {
 	
 	public List<IRoom> getRooms(){
 		return this.rooms;
+	}
+	
+	@Override
+	public String toString() {
+		return "Building("+buildingid+buildingdetail+"NumOfRooms("+rooms.size()+"))";
 	}
 
 }
