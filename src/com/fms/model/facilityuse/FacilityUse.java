@@ -1,7 +1,9 @@
 package com.fms.model.facilityuse;
 
 import java.util.List;
+import java.util.ArrayList;
 import com.fms.model.facilityinspection.*;
+import com.fms.model.facility.IBuilding;
 import com.fms.model.facility.IFacility;
 import com.fms.model.facility.IRoom;
 
@@ -9,9 +11,14 @@ public class FacilityUse implements IFacilityUse {
 	
 	private List<IUser> users;
 	private IFacility facility;
-	private IFacilitySchedule facilityschedule;
-	private List<IInspection> inspections;
 
+	public FacilityUse() {
+		
+	}
+	public FacilityUse(IFacility facility) {
+		this.users = new ArrayList<IUser>();
+		this.facility = facility;
+	}
 	
 	public void addUser(IUser user) {
 		
@@ -19,9 +26,12 @@ public class FacilityUse implements IFacilityUse {
 	}
 
 	
-	public void removeUser(IUser user) {
-		
-		this.users.remove(user);
+	public void removeUser(String userid) {
+		for (IUser user:users) {
+			if (user.getUserID() == userid) {
+				this.users.remove(user);
+			}
+		}
 	}
 
 	
@@ -36,55 +46,64 @@ public class FacilityUse implements IFacilityUse {
 	}
 
 	
-	public void addInspection(IInspection inspection) {
+	public void assignFacilityToUse(String roomid, String userid) {
+		for (IBuilding building:facility.getBuildings()) {
+			for (IRoom room:building.getRooms()) {
+				if (room.getRoomID() == roomid) {
+					if (room.getRoomStatus() == false){
+						System.out.println("Room is already in use, please choose a different room");
+						break;
+					}
+					for(IUser user:users) {
+						if (user.getUserID() == userid) {
+							room.setRoomStatus(true);
+							room.getTimeSlot().occupySlot(user);
+						}
+					}
+				}
+			}
+		}
 		
-		this.inspections.add(inspection);
-	}
-
-	public void removeInspection(IInspection inspection) {
-		
-		this.inspections.remove(inspection);
-	}
-
-	public List<IInspection> listInspection() {
-		 
-		return inspections;
 	}
 
 	
-	public void assignFacilityToUse(IRoom room, IUser user) {
-		// TODO Auto-generated method stub
+	public void vacateFacility(String roomid) {
+		for (IBuilding building:facility.getBuildings()) {
+			for (IRoom room:building.getRooms()) {
+				if (room.getRoomID() == roomid) {
+					if (room.getRoomStatus() == false){
+						System.out.println("Room is already in use, please choose a different room");
+						break;
+					}
+					
+					
+				}
+			}
+		}
 		
 	}
 
 	
-	public void vacateFacility(IRoom room) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public boolean isInUseDuringInterval(IRoom room, int interval) {
+	public boolean isInUseDuringInterval(String roomid, int interval) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
-	public double calcUsageRate(IRoom room) {
+	
+	public double calcUsageRate(String roomid) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
-	public double listActualUsage(IRoom room) {
+	
+	public double listActualUsage(String roomid) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 	
 	@Override
 	public String toString() {
-		return "FacilityUse [users=" + users + ", facility=" + facility + ", facilityschedule=" + facilityschedule
-				+ ", inspections=" + inspections + "]";
+		return "FacilityUse [users=" + users + ", facility=" + facility +  "]";
 	}
 
 }

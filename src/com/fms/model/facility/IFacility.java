@@ -1,5 +1,5 @@
 package com.fms.model.facility;
-
+import java.util.List;
 import com.fms.model.facilitymaintenance.*;
 import com.fms.model.facilityinspection.*;
 
@@ -14,5 +14,6 @@ public interface IFacility {
 	IFacilityMaintenance getFacilityMaintenance();
 	void setInspection(IInspection inspection);
 	IInspection getInspection();
+	List<IBuilding> getBuildings();
 	
 }

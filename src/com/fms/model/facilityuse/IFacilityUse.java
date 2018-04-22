@@ -6,10 +6,12 @@ import com.fms.model.facility.*;
 
 public interface IFacilityUse {
 	void addUser(IUser user);
-	void removeUser(IUser user);
-	void assignFacilityToUse(IRoom room, IUser user);
-	void vacateFacility(IRoom room);
-	boolean isInUseDuringInterval(IRoom room, int interval);
-	double calcUsageRate(IRoom room);
-	double listActualUsage(IRoom room);
+	void removeUser(String userid);
+	void assignFacilityToUse(String roomid, String userid);
+	void vacateFacility(String roomid);
+	boolean isInUseDuringInterval(String roomid, int interval);
+	double calcUsageRate(String roomid);
+	double listActualUsage(String roomid);
+	void setFacility(IFacility facility);
+	
 }

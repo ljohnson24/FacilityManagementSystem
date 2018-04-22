@@ -57,6 +57,9 @@ public class Facility implements IFacility {
 		this.buildings.remove(building);
 	}
 
+	public List<IBuilding> getBuildings() {
+		return this.buildings;
+	}
 	
 	public void setFacilityMaintenance(IFacilityMaintenance facilitymaintenance) {
 		this.facilitymaintenance = facilitymaintenance;

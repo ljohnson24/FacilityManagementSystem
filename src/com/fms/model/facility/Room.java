@@ -102,6 +102,10 @@ public class Room implements IRoom {
 		return this.roomstatus;
 	}
 	
+	public void setRoomStatus(boolean roomstatus) {
+		this.roomstatus = roomstatus;
+	}
+	
 	@Override
 	public String toString() {
 		return "Room(ID:"+roomid+", Capacity:"+roomcapacity+", Phone:"+roomphone+", Status:"
