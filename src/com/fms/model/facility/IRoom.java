@@ -15,7 +15,6 @@ public interface IRoom {
 	 void vacateRoom();
 	 boolean getRoomStatus();
 	 ITimeSlot getTimeSlot();
-	 void setTimeSlot();
 	 void setRoomStatus(boolean roomstatus);
 	 
 }

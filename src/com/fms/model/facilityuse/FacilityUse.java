@@ -49,10 +49,10 @@ public class FacilityUse implements IFacilityUse {
 		for (IBuilding building:facility.getBuildings()) {
 			for (IRoom room:building.getRooms()) {
 				if (room.getRoomID() == roomid) {
-					if (room.getRoomStatus() == true){
-						System.out.println("Room is already in use, please choose a different room");
-						break;
-					}
+					//if (room.getRoomStatus() == true){
+						//System.out.println("Room is already in use, please choose a different room");
+						//break;
+					//}
 					for(IUser user:users) {
 						if (user.getUserID() == userid) {
 							room.setRoomStatus(true);
@@ -70,10 +70,10 @@ public class FacilityUse implements IFacilityUse {
 		for (IBuilding building:facility.getBuildings()) {
 			for (IRoom room:building.getRooms()) {
 				if (room.getRoomID() == roomid) {
-					if (room.getRoomStatus() == false){
-						System.out.println("Room is already vacant");
-						break;
-					}
+					//if (room.getRoomStatus() == false){
+						//System.out.println("Room is already vacant");
+						//break;
+					//}
 					room.getTimeSlot().vacateSlot(0);
 					room.vacateRoom();
 					
@@ -99,7 +99,7 @@ public class FacilityUse implements IFacilityUse {
 	}
 
 	
-	public double calcUsageRate(String roomid) {
+	public int calcUsageRate(String roomid) {
 		for (IBuilding building:facility.getBuildings()) {
 			for (IRoom room:building.getRooms()) {
 				if (room.getRoomID() == roomid) {
@@ -112,18 +112,18 @@ public class FacilityUse implements IFacilityUse {
 	}
 
 	
-	public double listActualUsage(String roomid) {
+	public List<IUser> listActualUsage(String roomid) {
 		for (IBuilding building:facility.getBuildings()) {
 			for (IRoom room:building.getRooms()) {
 				if (room.getRoomID() == roomid) {
 					if (room.getRoomStatus() == true){
-						System.out.println("Room is occupied by " + room.getTimeSlot().getOccupiedSlots());
-						return 1;
+						
+						return room.getTimeSlot().getOccupiedSlots();
 					}
 				}
 			}
 		}
-		return 0;
+		return null;
 	}
 	
 	@Override

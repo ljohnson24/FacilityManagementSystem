@@ -10,7 +10,7 @@ public class Room implements IRoom {
 	private ITimeSlot timeslot;
 
 	
-	public ITimeSlot getTimeslot() {
+	public ITimeSlot getTimeSlot() {
 		return timeslot;
 	}
 
@@ -29,6 +29,7 @@ public class Room implements IRoom {
 		this.roomtype = roomtype;
 		this.roomphone = roomphone;
 		this.roomstatus = false;
+		this.timeslot = new TimeSlot(5);
 		
 	}
 	

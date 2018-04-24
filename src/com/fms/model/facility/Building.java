@@ -13,7 +13,7 @@ public class Building implements IBuilding {
 	public Building(String buildingid, IBuildingDetail buildingdetail, List<IRoom> rooms) {
 		this.buildingid = buildingid;
 		this.buildingdetail = buildingdetail;
-		this.rooms = new ArrayList<IRoom>();
+		this.rooms = rooms;
 	}
 
 	public String getBuildingID() {
