@@ -100,6 +100,8 @@ public class Main {
 		IFacilityFilter facilityfilter = new FacilityFilter();
 		System.out.println("\nList only occupied buildings:\n" + facilityfilter.filterByOccupancy(facility.getBuildings()));
 		System.out.println("\nList only buildings that has vacancies:\n" + facilityfilter.filterByVacancy(facility.getBuildings()));
+		
+		//end
 			
 	}
 
