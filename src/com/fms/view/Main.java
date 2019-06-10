@@ -7,7 +7,7 @@ import com.fms.model.facility.*;
 import com.fms.model.facilityinspection.*;
 import com.fms.model.facilitymaintenance.*;
 import com.fms.model.facilityuse.*;
-
+//main
 public class Main {
 
 	public static void main(String[] args) {
